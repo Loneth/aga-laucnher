@@ -1,11 +1,11 @@
 {
-  "name": "electron-updater-example",
-  "version": "0.7.1",
+  "name": "aga-launcher",
+  "version": "1.0.1",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Matt Haggard",
   "scripts": {
-    "publish": "build -p always"
+    "publish": "build --win -p always"
   },
   "devDependencies": {
     "electron": "^3.0.2",
@@ -16,7 +16,14 @@
     "electron-updater": "^4.0.6"
   },
   "build": {
-    "appId": "com.github.iffy.electronupdaterexample",
+    "appId": "com.github.loneth.agalauncher",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "loneth",
+        "repo": "aga-launcher"
+      }
+    ],
     "mac": {
       "category": "your.app.category.type",
       "target": [
